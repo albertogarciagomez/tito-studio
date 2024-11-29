@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creamos productos digitales - The Real Tito</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      /* Conexión de las fuentes */
+      @font-face {
+        font-family: "TartufoRegular";
+        src: url("./font/Tartuffo/Tartuffo_Trial-Regular.otf")
+          format("opentype");
+      }
+
+      @font-face {
+        font-family: "TartufoMedium";
+        src: url("./font/Tartuffo/Tartuffo_Trial-Medium.otf") format("opentype");
+      }
+
+      @font-face {
+        font-family: "TartufoLight";
+        src: url("./font/Tartuffo/Tartuffo_Trial-Light.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "TartufoThin";
+        src: url("./font/Tartuffo/Tartuffo_Trial-Thin.otf") format("opentype");
+      }
+
+      @font-face {
+        font-family: "Helvetica";
+        src: url("./font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.ttf")
+          format("opentype");
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+
+        background-color: #f3f1f1;
+      }
+      .nav {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: "TartufoMedium", Arial, sans-serif;
+        font-size: 32px;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+      .hero-section {
+        font-family: Helvetica, Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 40px;
+        .title {
+          font-family: "TartufoMedium", Arial, sans-serif;
+          font-size: 12.6cqw;
+          line-height: 90%;
+          letter-spacing: -0.2cqw;
+          width: 100%;
+          text-align: center;
+        }
+        hr {
+          width: 100%;
+          opacity: 20%;
+        }
+        .social-networks {
+          padding: 0 24px 40px;
+          display: flex;
+          gap: 16px;
+          a {
+            background: #e8e6e6;
+            padding: 8px 16px;
+            color: #0e0e0e;
+            border-radius: 64px;
+            text-decoration: none;
+            transition: 0.5s all ease-out;
+            &:hover {
+              background: #0e0e0e;
+              color: #e8e6e6;
+              svg {
+                transition: 0.5s all ease-out;
+                filter: invert(100%);
+              }
+            }
+          }
+        }
+      }
+      .main-section {
+        display: flex;
+        gap: 40px;
+        padding: 88px 40px 64px;
+        padding-bottom: 64px;
+        div {
+          width: 100%;
+        }
+        .text-to-talk {
+          font-family: "TartufoMedium", Arial, sans-serif;
+          font-size: 48px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      form {
+        gap: 24px;
+        div {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 16px;
+          gap: 8px;
+        }
+        label {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        input {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #0e0e0e20;
+          padding: 16px;
+          outline: none;
+        }
+        input:focus {
+          border-bottom: 1px solid #0e0e0e;
+        }
+        textarea {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #0e0e0e20;
+          padding: 16px;
+          outline: none;
+        }
+        .send-button {
+          height: 40px;
+          padding: 8px 16px;
+          background-color: #0e0e0e;
+          color: white;
+        }
+      }
+      .footer-section {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        div {
+          font-size: 17cqw;
+          opacity: 0.2;
+          font-family: "TartufoMedium", Arial, sans-serif;
+        }
+      }
+      .name-logo a {
+        color: #0e0e0e;
+        text-decoration: none;
+      }
+      .send-button {
+        border-radius: 100px;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body
+    class="center-section"
+    data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
+    data-aos-offset="0"
+  >
+    <div class="nav">
+      <div class="name-logo">
+        <a href="./index.html"> Tito Studio </a>
+      </div>
+    </div>
+    <div class="hero-section">
+      <div class="title">Ponte en Contacto</div>
+      <hr />
+      <div class="social-networks">
+        <a href="https://linkedin.com/" target="_blank"
+          >LinkedIn
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.50391 3.49902H8.50391V8.49902"
+              stroke="#0E0E0E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.50391 8.49902L8.50391 3.49902"
+              stroke="#0E0E0E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="https://instagram.com/"
+          >Instagram
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.50391 3.49902H8.50391V8.49902"
+              stroke="#0E0E0E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.50391 8.49902L8.50391 3.49902"
+              stroke="#0E0E0E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="main-section">
+      <div>
+        <div class="text-to-talk">Hablemos sobre tu proyecto.</div>
+      </div>
+      <div class="form-section">
+        <form action="">
+          <div>
+            <label for="name">Cómo te llamas</label>
+            <input type="text" id="name" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label for="email"> Tu correo electrónico </label>
+            <input type="email" id="email" placeholder="Tu email" />
+          </div>
+          <div>
+            <label for="message">Explica tu proyecto</label>
+            <textarea
+              name=""
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Escribe tu mensaje"
+            ></textarea>
+          </div>
+          <input type="submit" class="send-button" value="Contactar con Tito" />
+        </form>
+      </div>
+    </div>
+    <div class="footer-section">
+      <div>Tito Studio</div>
+    </div>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
