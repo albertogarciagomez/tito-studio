@@ -293,33 +293,8 @@
               required
             ></textarea>
           </div>
-          <button type="submit">Contactar con Tito</button>
+          <button class="send-button" type="submit">Contactar con Tito</button>
         </form>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-          (function () {
-            emailjs.init("TU_USER_ID"); // Reemplaza TU_USER_ID con tu User ID de EmailJS
-          })();
-
-          document
-            .getElementById("contact-form")
-            .addEventListener("submit", function (event) {
-              event.preventDefault(); // Evita que el formulario recargue la página
-
-              // Envía el formulario con EmailJS
-              emailjs
-                .sendForm("service_ayhvhq8", "template_u88aqoi", this)
-                .then(
-                  function () {
-                    alert("Mensaje enviado correctamente.");
-                  },
-                  function (error) {
-                    alert("Ocurrió un error. Por favor, inténtalo de nuevo.");
-                    console.error(error);
-                  }
-                );
-            });
-        </script>
       </div>
     </div>
     <div class="footer-section">
@@ -327,6 +302,29 @@
     </div>
     <script>
       AOS.init();
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("TU_USER_ID"); // Reemplaza TU_USER_ID con tu User ID de EmailJS
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita que el formulario recargue la página
+
+          // Envía el formulario con EmailJS
+          emailjs.sendForm("service_ayhvhq8", "template_u88aqoi", this).then(
+            function () {
+              alert("Mensaje enviado correctamente.");
+            },
+            function (error) {
+              alert("Ocurrió un error. Por favor, inténtalo de nuevo.");
+              console.error(error);
+            }
+          );
+        });
     </script>
   </body>
 </html>
