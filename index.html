@@ -3,16 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creamos productos digitales - Tito Studio</title>
-    <meta
-      name="description"
-      content="Creamos soluciones digitales simples y efectivas para empresas como Microsoft, Pescanova y más. Expertos en diseño, branding y desarrollo de productos."
-    />
+    <title>Creamos Productos Digitales Únicos | Tito Studio</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="icon" href="./image/favicon.png" type="image/x-icon" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tito.studio/" />
+    <meta
+      property="og:title"
+      content="Creamos Productos Digitales Únicos | Tito Studio"
+    />
+    <meta
+      property="og:description"
+      content="Diseñamos soluciones digitales innovadoras para empresas líderes y startups. Branding, diseño UX/UI y estrategias efectivas."
+    />
+    <meta
+      property="og:image"
+      content="https://tito.studio/image/share-image.jpg"
+    />
+    <meta property="og:url" content="https://tito.studio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
 
     <style>
+      /* Conexión de las fuentes */
       @font-face {
         font-family: "TartufoRegular";
         src: url("./font/Tartuffo/Tartuffo_Trial-Regular.otf")
@@ -20,8 +34,17 @@
       }
 
       @font-face {
+        font-family: "TartufoMedium";
+        src: url("./font/Tartuffo/Tartuffo_Trial-Medium.otf") format("opentype");
+      }
+
+      @font-face {
         font-family: "TartufoLight";
         src: url("./font/Tartuffo/Tartuffo_Trial-Light.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "TartufoThin";
+        src: url("./font/Tartuffo/Tartuffo_Trial-Thin.otf") format("opentype");
       }
 
       @font-face {
@@ -29,75 +52,110 @@
         src: url("./font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.ttf")
           format("opentype");
       }
-
+      /* Estilo global */
       body {
         margin: 0;
         padding: 0;
         font-family: Helvetica, Arial, sans-serif;
         background-color: #000;
         color: #fff;
+        text-align: center;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        text-align: center;
+        flex-direction: column;
+        height: 100svh;
       }
 
-      h1 {
+      h2 {
         font-family: "TartufoLight", Arial, sans-serif;
         margin: 0;
-        font-size: 32px;
-        line-height: 1.4;
-      }
-
-      p {
-        font-family: "TartufoLight", Arial, sans-serif;
-        opacity: 0.6;
-        font-size: 20px;
-        margin: 16px 0;
       }
 
       a {
         display: inline-block;
-        padding: 12px 24px;
+        margin: 20px;
+        padding: 10px 20px;
         color: #fff;
         border: 1px solid #fff;
         text-decoration: none;
-        border-radius: 24px;
+        border-radius: 100px;
         font-family: "TartufoLight", Arial, sans-serif;
-        font-size: 18px;
-        transition: 0.3s;
+        font-size: 24px;
       }
 
-      a:hover {
-        background-color: #fff;
-        color: #000;
-      }
-
-      footer {
+      .bottom-section {
         margin-top: auto;
-        font-size: 14px;
-        opacity: 0.5;
+      }
+
+      .bottom-section .services {
+        padding: 16px;
+        font-size: 16px;
+        font-family: Helvetica, Arial, sans-serif;
+        opacity: 50%;
+      }
+      .bottom-section .title {
+        font-family: "TartufoMedium", Arial, sans-serif;
+        font-size: 17cqw;
+        line-height: 90%;
+      }
+      .center-section {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        align-items: center;
+        max-width: 380px;
+        padding: 16px;
+        .inner {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          h1 {
+            font-family: "TartufoLight";
+            font-size: 32px;
+            margin: 0;
+            line-height: 110%;
+            letter-spacing: 1px;
+          }
+          div {
+            opacity: 0.5;
+            font-size: 20px;
+          }
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1 data-aos="fade-up">
-        Creamos soluciones digitales de forma simple y honesta
-      </h1>
-      <p data-aos="fade-up" data-aos-delay="200">
-        Hemos diseñado para Microsoft, Pescanova, Auren, Webel, Sopa...
-      </p>
-      <a href="./contact.html" data-aos="fade-up" data-aos-delay="400"
-        >Contacta con nosotros</a
-      >
-    </main>
-    <footer data-aos="fade-up" data-aos-delay="600">
-      Product Design · Branding · MVPs · Landing Pages · Design Systems ·
-      Product Management · Product Strategy
-    </footer>
+    <div
+      class="center-section"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="800"
+      data-aos-offset="0"
+    >
+      <div class="inner">
+        <h1>Creamos soluciones digitales de forma simple y honesta</h1>
+        <div>
+          Hemos diseñado para Microsoft, Pescanova, Auren, Webel, Sopa...
+        </div>
+      </div>
+      <a href="./contact.html">Contacta con nosotros</a>
+    </div>
+    <div
+      class="bottom-section"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="1500"
+      data-aos-offset="0"
+    >
+      <div class="title">Tito Studio</div>
+      <div class="services">
+        Product Design · Branding · MVPs · Landing Pages · Design Systems ·
+        Product Management · Product Strategy
+      </div>
+    </div>
     <script>
       AOS.init();
     </script>
