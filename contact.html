@@ -9,7 +9,6 @@
     <link rel="icon" href="./image/favicon.png" type="image/x-icon" />
 
     <style>
-      /* Conexión de las fuentes */
       @font-face {
         font-family: "TartufoRegular";
         src: url("./font/Tartuffo/Tartuffo_Trial-Regular.otf")
@@ -25,6 +24,7 @@
         font-family: "TartufoLight";
         src: url("./font/Tartuffo/Tartuffo_Trial-Light.otf") format("opentype");
       }
+
       @font-face {
         font-family: "TartufoThin";
         src: url("./font/Tartuffo/Tartuffo_Trial-Thin.otf") format("opentype");
@@ -35,12 +35,14 @@
         src: url("./font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.ttf")
           format("opentype");
       }
+
       body {
         margin: 0;
         padding: 0;
         font-family: Helvetica, Arial, sans-serif;
         background-color: #f3f1f1;
       }
+
       .nav {
         display: flex;
         width: 100%;
@@ -56,6 +58,7 @@
         right: 0;
         left: 0;
       }
+
       .hero-section {
         font-family: Helvetica, Arial, sans-serif;
         height: 100vh;
@@ -163,6 +166,9 @@
           padding: 8px 16px;
           background-color: #0e0e0e;
           color: white;
+          border-radius: 100px;
+          border: 0;
+          cursor: pointer;
         }
       }
       .footer-section {
@@ -178,10 +184,6 @@
       .name-logo a {
         color: #0e0e0e;
         text-decoration: none;
-      }
-      .send-button {
-        border-radius: 100px;
-        border: 0;
       }
     </style>
   </head>
@@ -287,14 +289,14 @@
           <div>
             <label for="message">Cuéntanos qué necesitas</label>
             <input
-            type="text"
+              type="text"
               id="message"
               name="message"
               placeholder="Tu mensaje"
               required
-            ></input>
+            />
           </div>
-          <button class="send-button" type="submit">Contactar con Tito</button>
+          <button class="send-button" type="submit">Enviar a Tito</button>
         </form>
 
         <!-- EmailJS Script -->
