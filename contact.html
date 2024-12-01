@@ -263,7 +263,7 @@
         </div>
       </div>
       <div class="form-section">
-        <form action="send_email.php" method="POST">
+        <form id="contact-form">
           <div>
             <label for="name">Cómo te llamas</label>
             <input
@@ -289,12 +289,37 @@
             <textarea
               id="message"
               name="message"
-              placeholder="Escribe tu mensaje"
+              placeholder="Tu mensaje"
               required
             ></textarea>
           </div>
-          <input type="submit" class="send-button" value="Contactar con Tito" />
+          <button type="submit">Contactar con Tito</button>
         </form>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+          (function () {
+            emailjs.init("TU_USER_ID"); // Reemplaza TU_USER_ID con tu User ID de EmailJS
+          })();
+
+          document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault(); // Evita que el formulario recargue la página
+
+              // Envía el formulario con EmailJS
+              emailjs
+                .sendForm("service_ayhvhq8", "template_u88aqoi", this)
+                .then(
+                  function () {
+                    alert("Mensaje enviado correctamente.");
+                  },
+                  function (error) {
+                    alert("Ocurrió un error. Por favor, inténtalo de nuevo.");
+                    console.error(error);
+                  }
+                );
+            });
+        </script>
       </div>
     </div>
     <div class="footer-section">
