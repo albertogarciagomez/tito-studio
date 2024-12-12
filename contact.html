@@ -199,6 +199,33 @@
         color: #0e0e0e;
         text-decoration: none;
       }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          padding-left: 24px;
+          padding-right: 24px;
+          .title {
+            font-size: 12cqw;
+          }
+          .social-networks {
+            padding: 0px;
+          }
+        }
+
+        .main-section {
+          flex-direction: column;
+          gap: 80px;
+          padding-left: 24px;
+          padding-right: 24px;
+          .text-to-talk {
+            font-size: 40px;
+          }
+        }
+      }
+      #enviado {
+        font-size: 14px;
+        margin-top: 24px;
+      }
     </style>
   </head>
   <body
@@ -311,6 +338,7 @@
             />
           </div>
           <button class="send-button" type="submit">Enviar a Tito</button>
+          <div id="enviado"></div>
         </form>
 
         <!-- EmailJS Script -->
@@ -327,16 +355,21 @@
             .addEventListener("submit", function (event) {
               event.preventDefault(); // Previene la recarga de la página
 
+              const enviadoDiv = document.getElementById("enviado");
+
               emailjs
                 .sendForm("service_ayhvhq8", "template_u88aqoi", this)
                 .then(
                   function () {
-                    alert("Mensaje enviado correctamente.");
+                    // Muestra el mensaje de éxito en el div con id "enviado"
+                    enviadoDiv.textContent = "Mensaje enviado correctamente.";
+                    enviadoDiv.style.color = "green";
                   },
                   function (error) {
-                    alert(
-                      "Ocurrió un error al enviar el mensaje. Por favor, intenta de nuevo."
-                    );
+                    // Muestra el mensaje de error en el div con id "enviado"
+                    enviadoDiv.textContent =
+                      "Ocurrió un error al enviar el mensaje. Por favor, intenta de nuevo.";
+                    enviadoDiv.style.color = "red";
                     console.error(error);
                   }
                 );
